@@ -1,0 +1,228 @@
+/* :root {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0 , 0 ,0.24);
+} */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f0fff4;
+    color: #04484e;
+}
+
+header {
+    position: sticky;
+    background: linear-gradient(135deg, #0a192f, #43c7a8);
+    border-radius: 50px 0px 50px 0px;
+    color: rgb(254, 254, 254);
+    text-align: left;
+    padding-left: 45px;
+    height: 90px;
+    place-content: center;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  
+}
+@media (max-width: 600px) {
+    header {
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f7f7f7; /* Mint aqua */
+  letter-spacing: 1px;
+}
+h2 i {
+  font-style: italic;
+  font-weight: normal;
+  color: #e5dbdb; /* Soft secondary text */
+  font-size: 2rem;
+  text-transform: none;
+  /* margin-top: 0.3rem; */
+}
+
+.container {
+    padding-top: 130px;
+    width: 90%;
+    max-width: 500px;
+    margin: 10px auto;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.381);
+}
+
+h1#balance {
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color:#109a7a;
+    margin-bottom: 1rem;
+   
+}
+h3{
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin:  40px 0 10px;
+   color:  #343333;
+}
+h4{
+    margin: 0;
+    text-transform: uppercase;
+  color:#343333; 
+}
+.inc-exp-container{
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0 , 0 ,0.24);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+}
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1;
+    margin: 5px 0;
+}
+
+.Income {
+  color: #05882a;
+}
+
+.Expense {
+  color: #d31629;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+    color:#2c3e50;
+}
+
+input[type= "text"],
+input[type= "number"] {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(19, 14, 69, 0.3);
+}
+.btn {
+    cursor: pointer;
+    background:#0e9482;
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0 , 0 ,0.24);
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.btn:hover {
+  border: 2px solid #04201f;
+}
+.btn:focus,.delete-btn:focus {
+    outline: 0;
+}
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.list li {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0 , 0 ,0.24);
+    color: #184a4e;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    transition: all 0.2s ease;
+}
+.list li:hover {
+    transform: scale(1.02);
+}
+.list li.plus {
+    border-right: 5px solid rgb(43, 119, 31);
+}
+.list li.minus {
+    border-right: 5px solid rgb(217, 5, 40);
+}
+.delete-btn {
+    cursor: pointer;
+    background-color: rgb(176, 46, 46);
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.list li:hover .delete-btn {
+    opacity: 1;
+}
+.input-error {
+    color:rgb(192, 33, 33);
+    /* background: #f8c9c4; */
+    margin-top: 5px;
+    /* border: 1px solid #da4949; */
+    border: none;
+    font-size: 0.9rem;
+  }
+  .success-msg {
+    color: #008000;
+    padding: 10px;
+    margin-top: 10px;
+    border:  none;
+    font-size: 1rem;
+    font-weight: bold;
+  } 
+
+  .required {
+    color: red;
+    font-weight: bold;
+  }
+  .transaction-date {
+  font-size: 0.75rem;
+}
