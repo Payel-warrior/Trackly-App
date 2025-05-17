@@ -14,6 +14,9 @@ Frontend: HTML5, CSS3, JavaScript (ES6+)
 Storage: localStorage API
 Design: Custom CSS with Flexbox & Responsive Layout
 
-
+To run this project locally:
+clone this repo in your local
+https://github.com/Payel-warrior/Trackly-App.git
+cd Trackly
 
 
